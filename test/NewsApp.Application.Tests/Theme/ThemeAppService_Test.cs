@@ -21,7 +21,6 @@ namespace NewsApp.Theme
         [Fact]
         public async Task Should_Get_All_Themes()
         {
-            //Arrage
 
             //Act
             var themes = await _themeAppService.GetThemesAsync();

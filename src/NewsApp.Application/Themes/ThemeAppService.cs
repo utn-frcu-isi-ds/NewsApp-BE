@@ -34,6 +34,6 @@ namespace NewsApp.Themes
             var theme = await AsyncExecuter.FirstOrDefaultAsync(query);
 
             return ObjectMapper.Map<Theme, ThemeDto>(theme);
-        }
+        }        
     }
 }
