@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using NewsApp.News;
 using NewsApp.Themes;
 using NewsApp.User;
 using Volo.Abp.Identity;
@@ -14,5 +15,7 @@ public class NewsAppApplicationAutoMapperProfile : Profile
          * into multiple profile classes for a better organization. */
         CreateMap<Theme, ThemeDto>();
         CreateMap<IdentityUser, UserDto>();
+        CreateMap<NewsDto, ArticleDto>().ReverseMap();
+        
     }
 }
