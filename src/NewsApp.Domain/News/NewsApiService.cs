@@ -28,7 +28,7 @@ namespace NewsApp.News
                 From = DateTime.Now.AddMonths(-1)
             }) ;
 
-            // se deberia lanzar una excepcion si la consulta a la api da error.
+            //TODO: se deberia lanzar una excepcion si la consulta a la api da error.
             if (articlesResponse.Status == Statuses.Ok)
             {
                 articlesResponse.Articles.ForEach( t=> responseList.Add(new ArticleDto {  Author = t.Author, 
@@ -38,8 +38,7 @@ namespace NewsApp.News
                                                                                           PublishedAt = t.PublishedAt
                 }));                                
             }
-
-            //TODO: falta registrar los tiempos de acceso de la API
+            
             return responseList;
         }
     }
