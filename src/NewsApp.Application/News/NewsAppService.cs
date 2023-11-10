@@ -18,6 +18,7 @@ namespace NewsApp.News
         }
         public async Task<ICollection<NewsDto>> Search(string query)
         {
+            //TODO: falta registrar los tiempos de acceso de la API
             var news = await _newsService.GetNewsAsync(query);
 
             return ObjectMapper.Map<ICollection<ArticleDto>, ICollection<NewsDto>>(news);            
