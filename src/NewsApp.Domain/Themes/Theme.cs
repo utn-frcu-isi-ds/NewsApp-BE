@@ -11,6 +11,7 @@ namespace NewsApp.Themes
     public class Theme : Entity<int>
     {
         public string Name  { get; set; }
+        public Guid UserId { get; set; }
         public IdentityUser User { get; set; }
     }
 }
